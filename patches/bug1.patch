@@ -1,0 +1,15 @@
+diff --git a/contracts/MeetingSchedulerFixed.sol b/contracts/MeetingSchedulerFixed.sol
+index ed6ee1a..6ab98b2 100644
+--- a/contracts/MeetingSchedulerFixed.sol
++++ b/contracts/MeetingSchedulerFixed.sol
+@@ -80,10 +80,6 @@ contract MeetingScheduler is IMeetingScheduler {
+             scheduledMeeting.status == MeetingStatus.PENDING,
+             "can't start a meeting if it isn't pending"
+         );
+-        require(
+-            block.timestamp >= scheduledMeeting.startTime,
+-            "meeting can't start in the past"
+-        );
+         require(
+             block.timestamp < scheduledMeeting.endTime,
+             "can't start a meeting after its end time"

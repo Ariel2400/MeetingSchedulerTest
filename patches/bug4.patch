@@ -1,0 +1,11 @@
+diff --git a/contracts/MeetingSchedulerFixed.sol b/contracts/MeetingSchedulerFixed.sol
+index ed6ee1a..4869471 100644
+--- a/contracts/MeetingSchedulerFixed.sol
++++ b/contracts/MeetingSchedulerFixed.sol
+@@ -124,5 +124,6 @@ contract MeetingScheduler is IMeetingScheduler {
+             "can only join to a meeting that has started"
+         );
+         meetings[meetingId].numOfParticipents++;
++        meetings[meetingId].status = MeetingStatus.ENDED;
+     }
+ }

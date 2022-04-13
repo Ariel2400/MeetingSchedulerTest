@@ -1,4 +1,4 @@
-certoraRun MeetingSchedulerBug1.sol:MeetingScheduler --verify MeetingScheduler:meetings.spec \
+certoraRun ./contracts/MeetingSchedulerFixed.sol:MeetingScheduler --verify MeetingScheduler:./specs/meetings.spec \
 --solc solc8.7 \
 --send_only \
 --staging \

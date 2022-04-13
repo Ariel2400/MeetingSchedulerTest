@@ -1,0 +1,13 @@
+diff --git a/contracts/MeetingSchedulerFixed.sol b/contracts/MeetingSchedulerFixed.sol
+index ed6ee1a..8b2b3ab 100644
+--- a/contracts/MeetingSchedulerFixed.sol
++++ b/contracts/MeetingSchedulerFixed.sol
+@@ -111,7 +111,7 @@ contract MeetingScheduler is IMeetingScheduler {
+         );
+         require(
+             block.timestamp >= scheduledMeeting.endTime,
+-            "meeting cannot be ended unless its end time passed"
++            "meeting cannot be ended unless its end time passed."
+         );
+ 
+         meetings[meetingId].status = MeetingStatus.ENDED;

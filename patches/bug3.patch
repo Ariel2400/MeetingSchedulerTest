@@ -1,0 +1,13 @@
+diff --git a/contracts/MeetingSchedulerFixed.sol b/contracts/MeetingSchedulerFixed.sol
+index ed6ee1a..901277d 100644
+--- a/contracts/MeetingSchedulerFixed.sol
++++ b/contracts/MeetingSchedulerFixed.sol
+@@ -64,7 +64,7 @@ contract MeetingScheduler is IMeetingScheduler {
+             startTime > block.timestamp,
+             "invalid start time, meeting has to be scheduled in the future"
+         );
+-        require(endTime > startTime, "meeting has to end after it starts");
++        require(endTime >= startTime, "meeting has to end after it starts");
+         meetings[meetingId] = ScheduledMeeting({
+             startTime: startTime,
+             endTime: endTime,
