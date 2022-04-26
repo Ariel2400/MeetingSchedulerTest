@@ -21,7 +21,7 @@ contract MeetingScheduler is IMeetingScheduler {
         override
         returns (uint256 startTime)
     {
-        return meetings[meetingId].startTime;
+        return meetings[meetingId].endTime;
     }
 
     function getEndTimeById(uint256 meetingId)
